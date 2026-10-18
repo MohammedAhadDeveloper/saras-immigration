@@ -48,34 +48,40 @@ export default function Footer({
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#" className="inline-block group">
-              <Logo variant="dark" />
+              <Logo className="h-14 sm:h-16 md:h-18" variant="dark" />
             </a>
 
             <p className="text-xs text-slate-600 leading-relaxed max-w-sm">
               Saras Immigration is an RCIC-licensed Canadian immigration consultancy with a 96% visa approval rate. We provide clear strategies, honest advice, and professionally prepared applications for Express Entry, PNP, LMIA, Spousal Sponsorship, Study Permits, and Visitor Visas.
             </p>
 
-            {/* RCIC & CICC License Badge */}
-            <div className="flex flex-col space-y-1.5 pt-1">
-              <div className="p-3 bg-white rounded-xl border border-slate-200 shadow-2xs inline-block w-fit">
-                <Image
-                  src="/rcic-logo.svg"
-                  alt="Amanpreet Singh - RCIC #R710896 Regulated Canadian Immigration Consultant"
-                  width={140}
-                  height={40}
-                  loading="lazy"
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-              <span className="text-[11px] font-bold text-stone-700">
-                Amanpreet Singh, RCIC #R710896
-              </span>
-              <span className="text-[10px] text-stone-500 font-medium">
-                College of Immigration and Citizenship Consultants (CICC)
-              </span>
-            </div>
+            {/* RCIC & CICC License */}
+           {/* RCIC & CICC License */}
+<div className="mt-4 inline-flex items-center gap-3 rounded-xl border border-slate-300 bg-white px-4 py-3 shadow-sm">
+  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#C8102E]/10">
+    <ShieldCheck className="h-6 w-6 text-[#C8102E]" />
+  </div>
+  <div className="leading-tight">
+    <div className="text-[10px] font-bold uppercase tracking-wider text-[#C8102E]">
+      Licensed Immigration Consultant
+    </div>
+    <div className="mt-0.5 text-sm font-bold text-slate-900">
+      Amanpreet Singh, RCIC
+    </div>
+    <div className="text-[11px] font-medium text-slate-600">
+      License #R710896 · Regulated by the CICC
+    </div>
+    <a
+      href="https://register.college-ic.ca/Public-Register-EN/"
+      target="_blank"
+      rel="noreferrer"
+      className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-slate-700 hover:text-[#C8102E] transition-colors"
+    >
+      <CheckCircle2 className="h-3 w-3" />
+      Verify on CICC public register
+    </a>
+  </div>
+</div>
           </div>
 
           {/* Quick Links Column */}
