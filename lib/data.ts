@@ -48,7 +48,7 @@ export const HERO_SLIDES: HeroSlideData[] = [
     translationKeyDesc: 'hero1_desc',
     defaultTitle: 'Express Entry & Skilled Immigration',
     defaultDesc: 'Fast-track Canadian PR via Federal Skilled Worker, Canadian Experience Class (CEC), and Provincial Nominee pathways.',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop', // Toronto Skyline Financial District
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=75&w=1280', // Toronto Skyline Financial District
     badge: 'Express Entry & PR Specialist',
   },
   {
@@ -57,7 +57,7 @@ export const HERO_SLIDES: HeroSlideData[] = [
     translationKeyDesc: 'hero2_desc',
     defaultTitle: 'Reunite With Your Loved Ones',
     defaultDesc: 'Bring your family to Canada. We handle spousal, parental, dependent child sponsorships, and Super Visas.',
-    imageUrl: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1920&auto=format&fit=crop', // Happy family outdoors
+    imageUrl: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=75&w=1280', // Happy family outdoors
     badge: 'Spousal & Family Sponsorship',
   },
   {
@@ -66,7 +66,7 @@ export const HERO_SLIDES: HeroSlideData[] = [
     translationKeyDesc: 'hero3_desc',
     defaultTitle: 'Study & Work in Canada',
     defaultDesc: 'Comprehensive study permit guidance, college admissions, and Post-Graduation Work Permit (PGWP) transition to PR.',
-    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop', // Students studying together
+    imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=75&w=1280', // Students studying together
     badge: 'Study Permits & PGWP Success',
   },
   {
@@ -75,7 +75,7 @@ export const HERO_SLIDES: HeroSlideData[] = [
     translationKeyDesc: 'hero4_desc',
     defaultTitle: 'LMIA & Employer Solutions',
     defaultDesc: 'Assisting Canadian employers and foreign skilled workers with Labour Market Impact Assessments and LMIA-supported work permits.',
-    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop', // Professionals at work
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=75&w=1280', // Professionals at work
     badge: 'LMIA & Work Authorizations',
   },
   {
@@ -84,7 +84,7 @@ export const HERO_SLIDES: HeroSlideData[] = [
     translationKeyDesc: 'hero5_desc',
     defaultTitle: 'Your Canadian Dream Starts Here',
     defaultDesc: 'Licensed RCIC representation with a 96% visa approval rate, honest advice, and offices in Brampton and Edmonton.',
-    imageUrl: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1920&auto=format&fit=crop', // Canadian Rockies Lake
+    imageUrl: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&q=75&w=1280', // Canadian Rockies Lake
     badge: '96% Visa Approval Rate',
   },
 ];

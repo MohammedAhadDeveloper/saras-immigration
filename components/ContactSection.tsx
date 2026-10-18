@@ -80,10 +80,11 @@ export default function ContactSection({ currentLang }: ContactSectionProps) {
             {/* Standalone Canadian Image Frame Outside Card */}
             <div className="relative h-52 sm:h-60 rounded-2xl overflow-hidden border border-slate-200 shadow-xs bg-slate-100 shrink-0 hidden md:block">
               <Image
-                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=800&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=75&w=800&auto=format&fit=crop"
                 alt="Canadian Natural Heritage"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
+                loading="lazy"
                 referrerPolicy="no-referrer"
                 className="object-cover"
               />

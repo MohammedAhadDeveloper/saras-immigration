@@ -72,8 +72,9 @@ export default function HeroSection({
             src={activeSlide.imageUrl}
             alt={getTranslation(currentLang, activeSlide.translationKeyTitle)}
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1400px"
             priority
+            fetchPriority="high"
             referrerPolicy="no-referrer"
             className="object-cover object-center"
           />

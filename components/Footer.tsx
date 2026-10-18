@@ -63,6 +63,7 @@ export default function Footer({
                   alt="Amanpreet Singh - RCIC #R710896 Regulated Canadian Immigration Consultant"
                   width={140}
                   height={40}
+                  loading="lazy"
                   unoptimized
                   referrerPolicy="no-referrer"
                   className="h-10 w-auto object-contain"

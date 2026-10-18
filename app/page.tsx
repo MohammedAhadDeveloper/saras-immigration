@@ -1,20 +1,37 @@
 'use client';
 
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import StepProcess from '@/components/StepProcess';
-import Testimonials from '@/components/Testimonials';
 import CtaBanner from '@/components/CtaBanner';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
-import FloatingContactWidget from '@/components/FloatingContactWidget';
-import AssessmentModal from '@/components/AssessmentModal';
-import ServicesModal from '@/components/ServicesModal';
 import { LanguageCode, LANGUAGES } from '@/lib/translations';
+
+// Dynamically load below-the-fold components to reduce initial DOM size and JavaScript execution time
+const StepProcess = dynamic(() => import('@/components/StepProcess'), {
+  loading: () => <div className="min-h-[400px] bg-slate-50" />,
+});
+const Testimonials = dynamic(() => import('@/components/Testimonials'), {
+  loading: () => <div className="min-h-[350px] bg-white" />,
+});
+const ContactSection = dynamic(() => import('@/components/ContactSection'), {
+  loading: () => <div className="min-h-[400px] bg-slate-50" />,
+});
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <div className="min-h-[250px] bg-slate-900" />,
+});
+const FloatingContactWidget = dynamic(() => import('@/components/FloatingContactWidget'), {
+  ssr: false,
+});
+const AssessmentModal = dynamic(() => import('@/components/AssessmentModal'), {
+  ssr: false,
+});
+const ServicesModal = dynamic(() => import('@/components/ServicesModal'), {
+  ssr: false,
+});
 
 export default function HomePage() {
   const router = useRouter();
@@ -60,7 +77,7 @@ export default function HomePage() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* 1. Hero Section (5 Auto-scrolling slides + manual controls + CTAs) */}
+        {/* 1. Hero Section (Above the fold LCP component) */}
         <HeroSection
           currentLang={currentLang}
           onOpenAssessment={handleOpenAssessment}
@@ -108,20 +125,24 @@ export default function HomePage() {
         onOpenAssessment={handleOpenAssessment}
       />
 
-      {/* Modals */}
-      <AssessmentModal
-        isOpen={isAssessmentOpen}
-        currentLang={currentLang}
-        onClose={() => setIsAssessmentOpen(false)}
-      />
+      {/* Modals - Only mounted in DOM when triggered */}
+      {isAssessmentOpen && (
+        <AssessmentModal
+          isOpen={isAssessmentOpen}
+          currentLang={currentLang}
+          onClose={() => setIsAssessmentOpen(false)}
+        />
+      )}
 
-      <ServicesModal
-        isOpen={isServiceModalOpen}
-        selectedServiceId={selectedServiceId}
-        currentLang={currentLang}
-        onClose={() => setIsServiceModalOpen(false)}
-        onOpenAssessment={handleOpenAssessment}
-      />
+      {isServiceModalOpen && (
+        <ServicesModal
+          isOpen={isServiceModalOpen}
+          selectedServiceId={selectedServiceId}
+          currentLang={currentLang}
+          onClose={() => setIsServiceModalOpen(false)}
+          onOpenAssessment={handleOpenAssessment}
+        />
+      )}
     </div>
   );
 }

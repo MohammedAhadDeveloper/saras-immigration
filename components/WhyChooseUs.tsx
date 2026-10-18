@@ -114,7 +114,8 @@ export default function WhyChooseUs({
                 alt="Amanpreet Singh"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                priority
+                loading="lazy"
+                referrerPolicy="no-referrer"
                 className="object-cover object-[70%_center]"
               />
             </motion.div>
