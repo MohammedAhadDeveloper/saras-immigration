@@ -1,36 +1,33 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Saras Immigration Consultancy | Licensed RCIC Canadian Immigration Services",
-  description:
-    "Saras Immigration Consultancy Inc. (RCIC #R710896) - 96% visa approval rate. Expert Canadian immigration services in Express Entry, Alberta AAIP, Ontario OINP, LMIA, Spousal Sponsorship, Study Permits, and Super Visas. Offices in Brampton & Edmonton.",
-  icons: {
-    icon: "/favicon.ico",
+  title: "Saras Immigration",
+  description: "Immigration consulting and visa services portal.",
+  openGraph: {
+    title: "Saras Immigration",
+    description: "Immigration consulting and visa services portal.",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body
-        className="bg-slate-50 text-slate-900 antialiased overflow-x-hidden selection:bg-[#C8102E] selection:text-white"
-        suppressHydrationWarning
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

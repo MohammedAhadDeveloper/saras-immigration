@@ -1,6 +1,8 @@
 {
-  "name": "Saras Immigration Consultancy",
-  "description": "96% visa approval rate. Licensed RCIC Canadian immigration services in Express Entry, Alberta AAIP, LMIA, Spousal Sponsorship, Study Permits, and Super Visas. Offices in Brampton & Edmonton.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "name": "Saras Immigration",
+  "description": "Immigration consulting and visa services portal.",
+  "prompt": "Saras Immigration web application",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
